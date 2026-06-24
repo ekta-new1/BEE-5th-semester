@@ -1,0 +1,103 @@
+Download vs code and git on your system.
+Also create account on github.
+
+Create a folder on your system and open it on vs code. 
+Create repo on your GitHub account.
+
+Open terminal on vs code and type the below commands on gitbash.
+
+$ git --version
+
+$ git init
+
+$ git add .
+
+$ git commit -m "first commit"
+
+$ git config --global user.email "beingekta1@gmail.com"
+
+$ git config --global user.name "Ekta"
+
+$ git commit -m "first commit"
+
+$ git branch -M main
+
+$ git push -u origin main
+
+$ git remote add origin https://github.com/ekta-new1/First.git
+
+$ git push -u origin main
+----------------------------------------------------
+Make changes in code then crtl+s
+
+$ git add .
+
+$ git commit -m "added h1 tag"
+
+$ git push origin main
+-------------------------------------------------------
+SHORTCUT TO PUSH CODE -
+Make changes in code then ctrl+s
+
+click on source control icon on left side 
+click on first.html file(or the name of your file you created)
+Type any relevant message in the box
+click commit then yes
+click on sync changes
+-------------------------------------------------------
+CREATING BRANCHES -
+
+$ git checkout -b branch1
+
+Make changes in first.html and save
+Type message and commit
+
+$ git push origin branch1
+
+$ git checkout main
+
+$ git pull origin branch1
+
+$ git push origin main
+-------------------------------------------------
+SHORTCUT TO CREATE BRANCHES -
+
+Click on main on bottom left side of vs code
+Give name to your branch for example - branch2
+click on create new branch
+click on publish branch
+
+Make changes in code and save
+Type message and commit
+sync changes
+
+Code is pushed to GitHub and changes are made in branch2 
+But if you want to make same changes in main branch then -
+
+Click branch2 on bottom left side of vs code
+Select main
+Select three dots on changes
+click on pull,push and then pull from
+click origin/branch2
+sync changes
+
+Now you can see changes in main branch as well on your github
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
