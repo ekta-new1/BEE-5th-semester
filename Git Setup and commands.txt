@@ -14,17 +14,9 @@ $ git add .
 
 $ git commit -m "first commit"
 
-$ git config --global user.email "beingekta1@gmail.com"
-
-$ git config --global user.name "Ekta"
-
-$ git commit -m "first commit"
-
 $ git branch -M main
 
-$ git push -u origin main
-
-$ git remote add origin https://github.com/ekta-new1/First.git
+$ git remote add origin https://github.com/ekta-new1/First.git (here you have to write the exact command written on your GitHub when you created your repo)
 
 $ git push -u origin main
 ----------------------------------------------------
@@ -52,7 +44,9 @@ $ git checkout -b branch1
 Make changes in first.html and save
 Type message and commit
 
-$ git push origin branch1
+$ git push origin branch1   (changes only in branch1)
+-------------------------------------------------
+Now if you want to make all the same changes in main branch as well then -
 
 $ git checkout main
 
