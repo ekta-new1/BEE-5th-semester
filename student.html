@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- //<meta> provides information about the webpage to the browser and search engines.
+  //Specifies the character encoding so the browser correctly displays letters, symbols from different languages. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- //name="viewport" - Indicates that this meta tag controls how the page is displayed on different screen sizes.
+  //content="width=device-width, initial-scale=1.0" - Sets the width of the page to match the device's width and sets the initial zoom level to 1 -->
+  <meta name="description" content="A demo page that practices fundamental HTML tags." />
+  <!-- //Specifies the description of the webpage used by search engines in search results. -->
+  
+  <title>Student Tech Club Portal</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 0; }
+    header, nav, main, aside, footer { padding: 16px; }
+    header { background: #f2f2f2; }
+    nav a { margin-right: 12px; }
+    .layout { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Student Tech Club Portal</h1>
+    <p>Learn, build, and share projects with other students.</p>
+  </header>
+
+  <nav aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#events">Events</a>
+    <a href="#register">Register</a>
+    <a href="https://developer.mozilla.org/" target="_blank">MDN Docs</a>
+  </nav>
+
+  <hr />
+
+  <div class="layout">
+    <main>
+      <section id="about">
+        <h2>About the Club</h2>
+        <article>
+          <h3>What we do</h3>
+          <p>
+            We practice <strong>HTML</strong>, <em>CSS</em>, and JavaScript.
+            <br />
+            Example code: &lt;h1&gt;Hello&lt;/h1&gt;
+          </p>
+          <img src="image.png" alt="Students collaborating on laptops" title="hello"/>
+        </article>
+
+        <article>
+          <h4>Mission</h4>
+          <p>Build real projects and present them monthly.</p>
+          <h5>Values</h5>
+          <p><small>Respect, curiosity, teamwork.</small></p>
+          <h6>Note</h6>
+          <p>All skill levels welcome.</p>
+        </article>
+      </section>
+
+      <section id="events">
+        <h2>Upcoming Events</h2>
+
+        <ul>
+          <li>HTML Basics Workshop</li>
+          <li>JavaScript DOM Practice</li>
+          <li>Project Showcase</li>
+        </ul>
+
+        <ol>
+          <li>Sign up</li>
+          <li>Attend workshop</li>
+          <li>Build a mini project</li>
+        </ol>
+
+        <table>
+          <caption>Weekly Schedule</caption>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Topic</th>
+              <th>Room</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>HTML</td>
+              <td>Lab 1</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>CSS</td>
+              <td>Lab 2</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>JavaScript</td>
+              <td>Lab 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="register">
+        <h2>Registration Form</h2>
+
+        <form action="/submit" method="post">
+          <fieldset>
+            <legend>Student Information</legend>
+
+            <p>
+              <label for="fullName">Full Name</label><br />
+              <input id="fullName" name="fullName" type="text" placeholder="Enter your name" required />
+            </p>
+
+            <p>
+              <label for="email">Email</label><br />
+              <input id="email" name="email" type="email" placeholder="name@example.com" required />
+            </p>
+
+            <p>
+              <label for="aboutYou">About You</label><br />
+              <textarea id="aboutYou" name="aboutYou" rows="4" placeholder="Tell us what you want to learn"></textarea>
+            </p>
+
+            <p>
+              <label for="level">Skill Level</label><br />
+              <select id="level" name="level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </p>
+
+            <p>
+              <input id="agree" name="agree" type="checkbox" required />
+              <label for="agree">I agree to follow the club rules</label>
+            </p>
+
+            <button type="submit">Submit</button>
+            <button type="button" id="clearBtn">Clear Message</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="embed">
+        <h2>Embedded Content</h2>
+        <iframe
+          title="Example embed"
+          src="https://www.wikipedia.org/"
+          width="100%"
+          height="200"
+        ></iframe>
+      </section>
+    </main>
+
+    <aside>     //The <aside> tag is semantic element used to display extra or related information that is connected to the main content
+      <h2>Announcements</h2>
+      <p>Next meeting: Thursday 3 PM.</p>
+      <p>Questions? <a href="mailto:techclub@example.com">Email us</a>.</p>
+      <blockquote cite="https://example.com">
+        Learning by building is the fastest path to confidence.
+      </blockquote>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Student Tech Club</p>
+    <p><a href="#about">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
