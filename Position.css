@@ -1,0 +1,280 @@
+/* ==========================
+   GENERAL STYLING
+========================== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    padding: 20px;
+
+    line-height: 1.6;
+}
+
+h2 {
+
+    color: darkblue;
+}
+
+.container,
+.parent {
+
+    border: 2px solid black;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    margin-bottom: 40px;
+}
+
+/* ==========================
+   COMMON BOX STYLE
+========================== */
+
+.box {
+
+    width: 140px;
+
+    height: 80px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin: 10px;
+}
+
+.red {
+
+    background: red;
+}
+
+.green {
+
+    background: green;
+}
+
+.blue {
+
+    background: steelblue;
+}
+
+.orange {
+
+    background: orange;
+}
+
+.purple {
+
+    background: purple;
+}
+
+/* ====================================================
+   1. STATIC
+==================================================== */
+
+.static {
+
+    position: static;
+}
+
+/*
+Static is the default.
+
+Layout
+
++---------+
+| Static  |
++---------+
+
++---------+
+| Blue    |
++---------+
+
+Nothing changes.
+*/
+
+
+/* ====================================================
+   2. RELATIVE
+==================================================== */
+
+.relative {
+
+    position: relative;
+
+    left: 80px;
+
+    top: 20px;
+}
+
+/*
+
+Original
+
++---------+
+|Relative |
++---------+
+
++---------+
+|Blue     |
++---------+
+
+
+After Moving
+
+        +---------+
+        |Relative |
+        +---------+
+
++---------+
+|Blue     |
++---------+
+
+Notice
+
+✔ Green moves
+
+✔ Original space still exists
+
+✔ Blue does NOT move upward
+
+*/
+
+
+/* ====================================================
+   3. ABSOLUTE
+==================================================== */
+
+.parent {
+
+    position: relative;
+
+    height: 250px;
+}
+
+/*
+Parent becomes reference point.
+*/
+
+.absolute {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+}
+
+/*
+
+Parent Container
+
++--------------------------------------+
+
+                  Absolute
+
+
+Blue Box
+
++--------------------------------------+
+
+Orange leaves normal flow.
+
+Blue behaves as if orange doesn't exist.
+
+*/
+
+
+/* ====================================================
+   4. STICKY
+==================================================== */
+
+.sticky-box {
+
+    position: sticky;
+
+    top: 0;
+
+    background: gold;
+
+    border: 2px solid black;
+
+    padding: 15px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+/*
+
+Initially
+
+Heading
+
+Sticky Header
+
+Content
+
+
+After Scrolling
+
+--------------------------
+Sticky Header
+--------------------------
+
+Content
+
+Content
+
+Content
+
+Sticky behaves like relative,
+then sticks like fixed.
+
+*/
+
+.content {
+
+    height: 800px;
+
+    padding: 20px;
+
+    border: 1px solid gray;
+
+    background: #f8f8f8;
+}
+
+
+/* ====================================================
+   5. FIXED
+==================================================== */
+
+.fixed {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+}
+
+/*
+
+The purple box remains
+at bottom-right of browser.
+
+No matter how much
+you scroll.
+
+*/
+

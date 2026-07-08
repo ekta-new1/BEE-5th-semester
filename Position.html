@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Position Demo</title>
+    <link rel="stylesheet" href="Position.css">
+</head>
+
+<body>
+
+    <h1>CSS Position Examples</h1>
+
+    <p>
+        This page demonstrates all five CSS positioning values:
+        Static, Relative, Absolute, Fixed and Sticky.
+    </p>
+
+    <!-- ================= STATIC ================= -->
+
+    <section>
+
+        <h2>1. Static Position (Default)</h2>
+
+        <p>
+            Static is the default position.
+            Elements appear one below another.
+        </p>
+
+        <div class="container">
+
+            <div class="box red static">
+                Static
+            </div>
+
+            <div class="box blue">
+                Blue Box
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ================= RELATIVE ================= -->
+
+    <section>
+
+        <h2>2. Relative Position</h2>
+
+        <p>
+            The green box moves 80px right and 20px down,
+            but its original space is still reserved.
+        </p>
+
+        <div class="container">
+
+            <div class="box green relative">
+                Relative
+            </div>
+
+            <div class="box blue">
+                Blue Box
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ================= ABSOLUTE ================= -->
+
+    <section>
+
+        <h2>3. Absolute Position</h2>
+
+        <p>
+            The orange box is positioned independently inside the parent.
+            The blue box ignores it because absolute removes the element
+            from the normal document flow.
+        </p>
+
+        <div class="parent">
+
+            <div class="box orange absolute">
+                Absolute
+            </div>
+
+            <div class="box blue">
+                Blue Box
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ================= STICKY ================= -->
+
+    <section>
+
+        <h2>4. Sticky Position</h2>
+
+        <p>
+            Scroll down.
+            When the yellow bar reaches the top,
+            it sticks there.
+        </p>
+
+        <div class="sticky-box">
+            Sticky Header
+        </div>
+
+        <div class="content">
+
+            <p>Scroll... Scroll... Scroll...</p>
+            <p>Keep scrolling...</p>
+            <p>Sticky behaves like relative at first.</p>
+            <p>Once it reaches top:0 it behaves like fixed.</p>
+            <p>Notice it remains visible.</p>
+            <p>Continue scrolling.</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+            <p>More Content...</p>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ================= FIXED ================= -->
+
+    <section>
+
+        <h2>5. Fixed Position</h2>
+
+        <p>
+            The purple box remains at the bottom-right
+            even while scrolling.
+        </p>
+
+    </section>
+
+    <div class="box purple fixed">
+        Fixed
+    </div>
+
+
+</body>
+
+</html>

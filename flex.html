@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Parent becomes a flex container */
+.container{
+
+    display:flex;
+
+    /* Items arranged in a row */
+    flex-direction:row;
+
+    /* Equal spacing between items */
+    justify-content:space-evenly;
+
+    /* Vertically center items */
+    align-items:center;
+
+    /* Height of the container */
+    height:530px;
+
+    background:lightblue;
+}
+
+/* Each child is a flex item */
+.box{
+
+    width:120px;
+    height:120px;
+
+    background:orange;
+
+    color:white;
+
+    /* Make the box itself a flex container */
+    display:flex;
+
+    /* Center text horizontally */
+    justify-content:center;
+
+    /* Center text vertically */
+    align-items:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box">Hello</div>
+    <div class="box">World</div>
+    <div class="box">Flex</div>
+    </div>
+</body>
+</html>

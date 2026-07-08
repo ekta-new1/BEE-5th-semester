@@ -1,0 +1,49 @@
+/* Body Styling */
+
+body{
+
+    font-family: Arial, sans-serif;
+
+    padding:30px;
+}
+
+
+/* Grid Container */
+
+.grid-container{
+
+    display:grid;
+
+    /* Create 3 equal columns */
+
+    grid-template-columns:100px 100px 100px;
+    /* creates new row automatically because there are only 3 columns defined */
+
+    /* Space between grid items */
+
+    gap:20px;
+
+    background:lightgray;
+
+    padding:20px;
+
+}
+
+
+/* Grid Items */
+
+.item{
+
+    background:steelblue;
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    padding:40px;
+
+}
