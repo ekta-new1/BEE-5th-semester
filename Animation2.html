@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animation Basics</title>
+
+<style>
+
+
+/*
+animation-name
+-> Specifies which @keyframes animation to use.
+*/
+.box1{
+    width:100px;
+    height:100px;
+    background:red;
+
+    animation-name: moveBox;
+    animation-duration:3s;
+}
+
+
+/*
+animation-duration
+-> Specifies how long one animation cycle takes.
+*/
+.box2{
+    width:100px;
+    height:100px;
+    background:blue;
+
+    animation-name: moveBox;
+    animation-duration:5s;
+}
+
+
+/*
+animation-delay
+-> Waits before starting the animation.
+*/
+.box3{
+    width:100px;
+    height:100px;
+    background:green;
+
+    animation-name: moveBox;
+    animation-duration:3s;
+    animation-delay:2s;
+}
+
+
+/*
+animation-iteration-count
+-> Specifies how many times the animation runs.
+*/
+.box4{
+    width:100px;
+    height:100px;
+    background:orange;
+
+    animation-name: moveBox;
+    animation-duration:2s;
+    animation-iteration-count:3;
+}
+
+
+/*
+animation-timing-function
+-> Controls the speed of the animation.
+*/
+.box5{
+    width:100px;
+    height:100px;
+    background:purple;
+
+    animation-name: moveBox;
+    animation-duration:3s;
+    animation-timing-function:ease-in-out;
+}
+
+
+/*
+animation-direction
+-> Specifies the direction in which the animation runs.
+*/
+.box6{
+    width:100px;
+    height:100px;
+    background:brown;
+
+    animation-name: moveBox;
+    animation-duration:2s;
+    animation-direction:alternate-reverse;
+}
+
+
+/*
+animation-fill-mode
+-> Decides the style before or after the animation ends.
+*/
+.box7{
+    width:100px;
+    height:100px;
+    background:deeppink;
+
+    animation-name: moveBox;
+    animation-duration:3s;
+    animation-delay:2s;
+    animation-fill-mode:both;
+}
+
+
+/*
+@keyframes
+-> Defines how the animation changes from start to end.
+*/
+@keyframes moveBox{
+
+    from{
+        transform:skewY(0deg) ;
+    }
+
+    to{
+        transform:skewY(20deg)  ;
+    }
+}
+
+
+/* Only for page layout */
+body{
+    font-family:Arial;
+    margin:20px;
+}
+
+.section{
+    margin-bottom:60px;
+}
+
+.demo{
+    height:120px;
+    border:1px solid black;
+    padding:10px;
+}
+
+h2{
+    margin-bottom:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>CSS Animation Properties</h1>
+
+<div class="section">
+    <h2>1. animation-name</h2>
+    <p>Uses the animation named <b>moveBox</b>.</p>
+
+    <div class="demo">
+        <div class="box1"></div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>2. animation-duration</h2>
+    <p>The animation takes <b>5 seconds</b> to complete.</p>
+
+    <div class="demo">
+        <div class="box2"></div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>3. animation-delay</h2>
+    <p>The animation starts after <b>2 seconds</b>.</p>
+
+    <div class="demo">
+        <div class="box3"></div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>4. animation-iteration-count</h2>
+    <p>The animation runs <b>3 times</b>.</p>
+
+    <div class="demo">
+        <div class="box4"></div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>5. animation-timing-function</h2>
+    <p><b>ease-in-out</b> starts slowly, becomes fast, then slows again.</p>
+
+    <div class="demo">
+        <div class="box5"></div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>6. animation-direction</h2>
+    <p><b>alternate</b> moves forward, then backward.</p>
+
+    <div class="demo">
+        <div class="box6"></div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>7. animation-fill-mode</h2>
+    <p><b>forwards</b> keeps the final position after the animation ends.</p>
+
+    <div class="demo">
+        <div class="box7"></div>
+    </div>
+</div>
+
+</body>
+</html>
