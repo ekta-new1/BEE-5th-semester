@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <h1>Movie Card Generator</h1>
+ 
+  <div class="form-box">
+	<input type="text" id="movieUrl" placeholder="Movie Image URL">
+	<input type="text" id="movieName" placeholder="Movie Name">
+	<input type="number" id="movieRating" placeholder="Rating (out of 10)" min="0" max="10">
+	<button onclick="addMovie()">Add Movie</button>
+  </div>
+ 
+  <div id="movieContainer" class="movie-container"></div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

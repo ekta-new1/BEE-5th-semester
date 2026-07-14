@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+ 
+.form-box {
+  margin-bottom: 30px;
+}
+ 
+.form-box input {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+ 
+.form-box button {
+  padding: 8px 16px;
+  background: #2e75b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+ 
+.movie-card {
+  width: 180px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+ 
+.movie-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+ 
+.movie-card h3 {
+  font-size: 16px;
+  margin: 8px 0 4px;
+}
+ 
+.movie-card p {
+  margin: 0 0 10px;
+  color: #555;
+}
