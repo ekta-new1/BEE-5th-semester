@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <h1> User Info Table</h1>
+ 
+  <div class="form-box">
+	<input type="text" id="userName" placeholder="Name">
+	<input type="number" id="userAge" placeholder="Age">
+	<input type="email" id="userEmail" placeholder="Email">
+	<button onclick="addUser()">Add User</button>
+  </div>
+ 
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+
+	<tbody id="userTableBody">
+  	<!-- new rows will be added here -->
+    </tbody>
+    
+  </table>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
