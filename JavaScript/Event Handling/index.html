@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling Demo</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        input, button{
+            padding:10px;
+            margin:8px 0;
+        }
+
+        #error{
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Handling Demo</h2>
+
+    <form id="myForm">
+
+        <label>Enter Your Name</label><br>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter your name"
+        >
+
+        <br><br>
+
+        <button type="button" id="btn">
+            Click Me
+        </button>
+
+        <button type="submit">
+            Submit
+        </button>
+
+        <p id="error"></p>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
