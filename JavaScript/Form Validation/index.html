@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation Demo</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        form{
+            width:350px;
+        }
+
+        input{
+            width:100%;
+            padding:8px;
+            margin-bottom:5px;
+        }
+
+        .error{
+            color:red;
+            font-size:14px;
+            margin-bottom:10px;
+        }
+
+        #successMessage{
+            color:green;
+            font-weight:bold;
+            margin-top:20px;
+        }
+
+        button{
+            padding:10px 20px;
+            margin-top:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form id="registrationForm">
+
+    <label>Name</label><br>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div>
+
+    <label>Email</label><br>
+    <input type="text" id="email">
+    <div id="emailError" class="error"></div>
+
+    <label>Age</label><br>
+    <input type="number" id="age">
+    <div id="ageError" class="error"></div>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<h2 id="successMessage"></h2>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
