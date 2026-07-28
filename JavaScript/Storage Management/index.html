@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Data Management Demo</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:500px;
+            margin:40px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        input{
+            width:95%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            padding:10px;
+            margin:5px;
+            cursor:pointer;
+        }
+
+        #output{
+            margin-top:20px;
+            background:#eeeeee;
+            padding:15px;
+            min-height:120px;
+            white-space:pre-line;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Browser Data Management</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="number" id="age" placeholder="Enter Age">
+
+    <br>
+
+    <button onclick="saveLocal()">Save to Local Storage</button>
+
+    <button onclick="saveSession()">Save to Session Storage</button>
+
+    <button onclick="showData()">Show Data</button>
+
+    <button onclick="removeLocal()">Remove Local</button>
+
+    <button onclick="removeSession()">Remove Session</button>
+
+    <button onclick="clearAll()">Clear All</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
