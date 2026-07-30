@@ -1,0 +1,40 @@
+Create a web page that contains a Student Feedback Form. Implement the following features:
+
+1. Create a Form-
+The form should contain the following fields:
+Student Name (Text Box)
+Email (Email Box)
+Course (Dropdown)
+Feedback (Textarea)
+
+Also add the following buttons:
+Submit Feedback
+Delete Stored Data
+
+2. Form Validation -
+NO field should be left empty. If any field is left emptied, display error message.
+Email should be in a valid format.
+
+3. Display Error Messages
+Display an appropriate error message below the respective field if the validation fails.
+Error messages should disappear automatically when the user enters valid input.
+
+4. Store Data in Local Storage
+After successful validation:
+Store the following details in Local Storage:
+Student Name
+Email
+Course
+Feedback
+Display the stored information below the form.
+
+5. Store Data in Session Storage
+Store only the Student Name in Session Storage.
+Display the message:
+Current Session User: Student Name
+The session data should be removed automatically after the browser tab is closed.(because it is session storage)
+
+6. Delete Stored Data Button-
+Remove all feedback details from Local Storage and Session Storage.
+Display the message:
+No feedback stored. 
