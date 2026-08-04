@@ -1,0 +1,231 @@
+ES6 Features -
+ES6 stands for ECMAScript 6.
+ECMAScript (ES) is the official standard or specification on which JavaScript is based.
+6 represents the 6th version of this standard.
+ES6 was released in 2015, so it is also called ECMAScript 2015 (ES2015).
+ES6 is the 6th version of JavaScript that introduced many new features to make coding easier, shorter, and more powerful.
+Why was ES6 introduced?
+Before ES6, JavaScript code was often long and repetitive. ES6 introduced new features that help developers write cleaner and more readable code.
+
+1. Template Literals (` `)
+Template Literals allow us to create strings easily using backticks ( ) instead of single (' ') or double (" ") quotes.
+They also allow us to insert variables directly inside the string using ${ }.
+Before ES6
+let name = "Rahul";
+let age = 22;
+console.log("My name is " + name + " and I am " + age + " years old.");
+
+Output
+My name is Rahul and I am 22 years old.
+
+Using Template Literals
+let name = "Rahul";
+let age = 22;
+console.log(`My name is ${name} and I am ${age} years old.`);
+Output
+My name is Rahul and I am 22 years old.
+
+Multi-line String
+let message = `
+Welcome
+to
+JavaScript
+`;
+console.log(message);
+Output
+Welcome
+to
+JavaScript
+Advantages
+No need for +
+Easy to insert variables
+Supports multiple lines
+2. Spread Operator (...)
+Spread Operator expands an array or object into individual elements.
+Example 1
+let numbers = [10,20,30];
+
+console.log(...numbers);
+Output
+10 20 30
+
+Example 2: Copy Array
+let arr1 = [1,2,3];
+
+let arr2 = [...arr1];
+
+console.log(arr2);
+Output
+[1,2,3]
+
+Example 3: Merge Arrays
+let a = [1,2];
+let b = [3,4];
+
+let c = [...a,...b];
+
+console.log(c);
+Output
+[1,2,3,4]
+
+Example 4: Object Copy
+let student = {
+    name:"Aman",
+    age:20
+};
+let copy = {...student};
+console.log(copy);
+
+
+Output -
+{ name: "Aman", age: 20 } 
+
+Uses
+Copy arrays
+Merge arrays
+Copy objects
+Merge objects
+
+3. Rest Operator (...)
+Rest Operator collects multiple values into a single array.
+Rest = Collect Remaining Values
+Example
+function show(...numbers){
+    console.log(numbers);
+}
+
+show(10,20,30,40);
+Output
+[10,20,30,40]
+Another Example
+function total(a,b,...others){
+    console.log(a);
+    console.log(b);
+    console.log(others);
+}
+
+total(10,20,30,40,50);
+Output
+10
+20
+[30,40,50]
+
+Difference
+Spread → Expands
+
+Rest → Collects
+
+
+4. Destructuring
+Destructuring means taking values from an array or object and storing them into separate variables easily.
+Array Destructuring
+Without Destructuring
+let colors = ["Red","Blue","Green"];
+
+let first = colors[0];
+let second = colors[1];
+
+Using Destructuring
+let colors = ["Red","Blue","Green"];
+
+let [first, second] = colors;
+
+console.log(first);
+console.log(second);
+Output
+Red
+Blue
+
+Skip Values
+let numbers = [10,20,30];
+
+let [a,,c] = numbers;
+
+console.log(a);
+console.log(c);
+Output
+10
+30
+Object Destructuring
+let student = {
+    name:"Aman",
+    age:21,
+    city:"Delhi"
+};
+
+let {name, age} = student;
+
+console.log(name);
+console.log(age);
+Output
+Aman
+21
+
+Rename Variable
+let student = {
+    name:"Aman"
+};
+
+let {name:studentName} = student;
+
+console.log(studentName);
+Output
+Aman
+
+Advantages
+Less code
+Easy to read
+Easy to extract data
+
+
+5. Default Parameters
+Default Parameters allow us to give a default value to function parameters.
+If the user does not pass a value, the default value is used.
+Without Default Parameter
+function greet(name){
+    console.log("Hello " + name);
+}
+
+greet();
+Output
+Hello undefined
+
+With Default Parameter
+function greet(name="Guest"){
+    console.log("Hello " + name);
+}
+
+greet();
+Output
+Hello Guest
+
+Passing Value
+function greet(name="Guest"){
+    console.log("Hello " + name);
+}
+
+greet("Rahul");
+Output
+Hello Rahul
+
+Real-Life Example
+function order(item="Burger", quantity=1){
+    console.log(`Item: ${item}`);
+    console.log(`Quantity: ${quantity}`);
+}
+
+order();
+Output
+Item: Burger
+Quantity: 1
+
+order("Pizza",2);
+Output
+Item: Pizza
+Quantity: 2
+
+
+
+
+—--------------------------------------------------------------------------------------------------------------------------
+
