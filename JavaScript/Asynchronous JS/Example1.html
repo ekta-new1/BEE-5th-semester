@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Callback Demo</title>
+</head>
+<body>
+
+    <h1>JavaScript Callback Demo</h1>
+
+    <p>Open the browser console to see the output.</p>
+
+    <script>
+
+        console.log("Program Started");
+
+        // setTimeout() registers a timer with the browser
+        setTimeout(function () {
+
+            // Callback Function
+            console.log("Download Complete");
+
+        }, 3000);
+
+        console.log("Doing Other Work...");
+        console.log("Reading Emails...");
+        console.log("Program Finished");
+
+    </script>
+
+</body>
+</html>
