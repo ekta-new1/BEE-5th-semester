@@ -1,0 +1,185 @@
+Callbacks
+What is a Callback?
+A callback is a function that is passed as an argument to another function and is executed later when a specific task is completed.
+A callback is a function that "calls back" after another function finishes its work.
+Syntax
+function greet(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function bye() {
+    console.log("Good Bye!");
+}
+
+greet("Ekta", bye);
+Output
+Hello Ekta
+Good Bye!
+Callbacks are mainly used when:
+A task takes time to complete.
+We want another function to execute only after the first task finishes.
+Handling asynchronous operations like:
+API calls
+Reading files
+Timers
+Database operations
+Example 1: Simple Callback
+function display(message) {
+    console.log(message);
+}
+
+function calculate(a, b, callback) {
+    let sum = a + b;
+    callback(sum);
+}
+
+calculate(10, 20, display);
+Output
+30
+Example 2: Callback with setTimeout()
+function message() {
+    console.log("This runs after 3 seconds");
+}
+
+setTimeout(message, 3000);
+
+console.log("Program Started");
+Output
+Program Started
+(This waits 3 seconds)
+This runs after 3 seconds
+Advantages of Callbacks
+Easy to understand for small programs
+Useful for asynchronous tasks
+Allows execution after completion of another task
+Disadvantages of Callbacks
+Difficult to manage when many callbacks are nested.
+Leads to Callback Hell.
+Hard to debug.
+Reduces code readability.
+Callback Hell
+When callbacks are nested inside callbacks multiple times, the code becomes difficult to read and maintain.
+This situation is called Callback Hell or Pyramid of Doom.
+Example
+login(function() {
+
+    getUser(function() {
+
+        getOrders(function() {
+
+            getPayment(function() {
+
+                console.log("Completed");
+
+            });
+
+        });
+
+    });
+
+});
+Notice how the code keeps moving towards the right.
+What is Synchronous JavaScript?
+JavaScript executes code line by line.
+It waits for one statement to finish before moving to the next.
+This is called Synchronous Execution.
+Example
+console.log("A");
+
+console.log("B");
+
+console.log("C");
+Output
+A
+B
+C
+Everything executes in sequence.
+Problem with Synchronous Programming
+Suppose one task takes 10 seconds.
+console.log("Start");
+
+waitFor10Seconds();
+
+console.log("End");
+Output
+Start
+(wait 10 seconds)
+End
+During those 10 seconds, nothing else happens.
+This makes applications slow.
+Asynchronous JavaScript -
+Asynchronous JavaScript allows long-running tasks to execute without blocking the rest of the program.
+Instead of waiting, JavaScript continues executing the remaining code.
+Example
+console.log("Start");
+
+setTimeout(function() {
+    console.log("Hello");
+}, 3000);
+
+console.log("End");
+Output
+Start
+End
+(after 3 seconds)
+Hello
+JavaScript does not wait for setTimeout().
+
+
+How JavaScript Handles Asynchronous Code
+JavaScript uses:
+Call Stack - The Call Stack is the place where JavaScript keeps the function that is currently executing. Imagine JavaScript as a teacher who can do only one task at a time. It keeps a list of tasks to perform. That list is called the Call Stack. 
+Web APIs - Browser features that handle asynchronous tasks like timers
+Callback Queue (Task Queue) - The Callback Queue is a waiting area. When an asynchronous task (like setTimeout) finishes, its callback function waits here until JavaScript is free.
+Event Loop - A manager that checks whether the Call Stack is empty. If it is, it moves the next callback from the Callback Queue to the Call Stack.
+Example
+console.log("Start");
+
+setTimeout(function() {
+    console.log("Hello");
+}, 2000);
+
+console.log("End");
+Step 1 - Call Stack
+console.log("Start")
+Output
+Start
+Step 2
+setTimeout() goes to Web APIs.
+The timer starts.
+JavaScript does not wait.
+Step 3
+Next line executes.
+console.log("End")
+Output
+End
+Step 4
+After 2 seconds,
+The callback function moves to the Callback Queue.
+Notice: The callback does not directly enter the Call Stack. It first waits in the Callback Queue.
+Step 5
+The Event Loop checks whether the Call Stack is empty.
+If No → Wait.
+If Yes → Take the first callback from the Callback Queue and push it into the Call Stack.
+Here, after console.log("End"), the Call Stack is empty.
+So the Event Loop moves the callback.
+
+Step 6
+The callback executes.
+Output
+Hello
+
+
+
+Call Stack
+The Call Stack stores the functions that JavaScript is currently executing. 
+Callback
+A function passed to another function that will run later. In this example: function() { console.log("Hello"); }
+Web APIs
+Browser features that handle asynchronous tasks like timers, network requests, etc.
+Callback Queue
+A waiting line where completed callback functions wait before they can execute.
+Event Loop
+A manager that checks whether the Call Stack is empty. If it is, it moves the next callback from the Callback Queue to the Call Stack.
+
