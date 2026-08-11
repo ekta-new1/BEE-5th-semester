@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promises and Promise Chaining</title>
+</head>
+
+<body>
+
+    <h1>Online Food Order</h1>
+
+    <script>
+
+        console.log("1. Placing Order...");
+
+        let order = new Promise(function(resolve, reject) {
+
+            setTimeout(function() {
+
+                let orderSuccessful = false;
+
+                if (orderSuccessful) {
+
+                    resolve("2. Order Placed Successfully");
+
+                } else {
+
+                    reject("Order Failed");
+
+                }
+
+            }, 2000);
+
+        });
+
+// We are saying:
+// "Pretend that placing the order takes 2 seconds."
+// After 2 seconds, JavaScript checks:
+// let orderSuccessful = true;
+// Since it is true:
+// resolve("2. Order Placed Successfully");
+// is executed.
+// So the Promise becomes:
+// Pending
+//    ↓
+// Fulfilled
+
+
+
+        // Promise Chaining
+        order
+
+            // First .then()
+            .then(function(message) {
+
+                console.log(message);
+
+                // Returning value to next .then()
+                return "3. Restaurant Accepted the Order";
+
+            })
+
+
+            // Second .then()
+            .then(function(message) {
+
+                console.log(message);
+
+                return "4. Food is Being Prepared";
+
+            })
+
+
+            // Third .then()
+            .then(function(message) {
+
+                console.log(message);
+
+                return "5. Food is Ready";
+
+            })
+
+
+            // Fourth .then()
+            .then(function(message) {
+
+                console.log(message);
+
+                return "6. Delivery Partner Picked Up the Order";
+
+            })
+
+
+            // Fifth .then()
+            .then(function(message) {
+
+                console.log(message);
+
+                console.log("7. Order Delivered Successfully!");
+
+            })
+
+
+            // Handling errors
+            .catch(function(error) {
+
+                console.log("Error:", error);
+
+            });
+
+    </script>
+
+</body>
+</html>
