@@ -1,0 +1,20 @@
+Assignment 4 : Online Movie Ticket Booking System
+Create an Online Movie Ticket Booking System using JavaScript Promises and Promise Chaining.
+
+Create a Promise named booking.
+Use setTimeout() to simulate an asynchronous booking process.
+
+Create a variable: let seatsAvailable = true;
+If seats are available, use resolve(); otherwise, use reject().
+Implement Promise Chaining using multiple .then() methods.
+
+Your chain should follow this sequence:
+1. Check Seat Availability
+2. Process Payment
+3. Confirm Booking
+4. Generate Ticket
+Pass the result from one .then() to the next using return.
+
+Use .catch() to handle errors such as "No Seats Available."
+
+Display all results in the Browser Console.
