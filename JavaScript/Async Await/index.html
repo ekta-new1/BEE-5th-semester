@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Async Await Example</title>
+</head>
+
+<body>
+
+    <h1>Async / Await Example</h1>
+
+    <button onclick="checkOrder()">
+        Place Food Order
+    </button>
+
+    <p id="p"></p>
+
+
+    <script>
+
+        function placeOrder() {
+
+            // A Promise represents a result that will be available sometime in the future.
+            // Here, the Promise means:
+            // "I will give you the order result later."
+
+            return new Promise(resolve => {
+
+                setTimeout(() => { // setTimeout() is used to simulate the restaurant taking 3 seconds to prepare the order.
+
+                    resolve(" Order Confirmed! Pizza is Ready."); // resolve() means: 
+                    // "The asynchronous work is completed."
+                    // We are sending the final result  back to the function that is waiting for it.
+
+                }, 3000);
+
+            });
+        }
+
+        async function checkOrder() {
+
+            const para = document.getElementById("p");
+             para.innerText = " Placing your order...";  // Display a message immediately
+
+            const result = await placeOrder();
+            // placeOrder() returns a Promise.
+            // await means: "Wait for this Promise to finish and give me its final result."
+            // The checkOrder() function pauses at this line  until the Promise is completed.
+            // NOTE :
+            // The entire browser does NOT freeze.
+            // Only this async function waits for the result.
+
+            // After 3 seconds, the Promise is resolved.
+            // The result will contain: "Order Confirmed! Pizza is Ready."
+
+            para.innerText = result;
+
+
+        }
+
+    </script> 
+
+</body>
+
+</html>
