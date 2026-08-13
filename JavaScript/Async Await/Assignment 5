@@ -1,0 +1,23 @@
+Assignment 5: Online Exam Result System 
+
+Create an HTML page with:
+Heading: Online Exam Result
+Check Result button
+Area to display the result.
+
+Create a calculateResult() function which returns a Promise.
+Use setTimeout() for a 3-second delay.
+Resolve with: "Your result is ready! You scored 85 marks."
+
+Create an async function checkResult():
+Show "Calculating your result..." immediately.
+Use await calculateResult().
+Display the result after 3 seconds.
+Connect checkResult() to the button.
+
+Add comments explaining:
+Promise
+async
+await
+resolve()
+setTimeout()
