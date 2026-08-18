@@ -1,0 +1,38 @@
+Assignment: Product Management API 
+
+Create a simple Product Management System using HTML and JavaScript.
+
+Use the Fake Store API:
+https://fakestoreapi.com/products
+
+Requirements
+Create an HTML page with 5 buttons:
+View Products
+Add Product
+Update Product
+Update Product Price
+Delete Product
+
+Create the following JavaScript functions:
+getProducts() → Use GET to fetch all products and display them in the console.
+addProduct() → Use POST to add a new product with:
+Title
+Price
+Category
+updateProduct() → Use PUT to completely update product with ID 1.
+updatePrice() → Use PATCH to update only the price of product ID 1.
+deleteProduct() → Use DELETE to delete product ID 1.
+Use async/await for all API requests.
+
+Convert API responses using:
+await response.json()
+Display the response of every operation using console.log().
+Product Example
+
+For POST, you can send:
+
+const product = {
+    title: "Wireless Headphones",
+    price: 1999,
+    category: "electronics"
+};
