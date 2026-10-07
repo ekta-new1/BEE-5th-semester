@@ -37,11 +37,11 @@ app.get("/students/:id", (req, res) => {  //Here :id is a route parameter
   const students = JSON.parse(data);
 
   // Get ID from URL and convert it to number
-  const id = Number(req.params.id);  //Express takes the 2 from the URL and stores it in req.params.id
+  const id = Number(req.params.id);  //Express takes the 2(id) from the URL and stores it in req.params.id
  // It is a string, not a number so Number() converts it.
 
   // Find student whose ID matches the URL ID
-  const student = students.find((s) => s.id === id);  
+  const student = students.find((s) => s.id === id);   //find()returns the actual element
 // Here s represents one student at a time which it takes from students js array which we converted above.
 // s.id accesses the student's id.
 
@@ -53,6 +53,34 @@ app.get("/students/:id", (req, res) => {  //Here :id is a route parameter
   // Send the found student as response
   res.send(student);
 });
+
+app.put("/students/:id", (req, res) => {
+  const data = fs.readFileSync("student.json", "utf-8");
+  const students = JSON.parse(data);  //usable format(js array)
+ 
+  const id = Number(req.params.id);
+  //In Express.js, req.params.id is used to get a value from the URL path parameter.
+
+  const index = students.findIndex((s) => s.id === id); 
+  //findIndex() returns the index of the element in the array. If not found, it returns -1.
+ 
+  if (index === -1) {   //If findIndex() cannot find anything, it returns -1
+    return res.send("Student Not Found");  
+  }
+ 
+  // Update the student data with the new data from req.body
+  students[index] = {
+    ...students[index],   //we are copying all the properties of that object using ...(spread operator)
+    ...req.body
+  };
+ 
+  fs.writeFileSync(
+    "student.json",
+    JSON.stringify(students) //again converting back to JSON format to write in file.
+  );
+  res.send("Student Updated Successfully");
+});
+
 
 
 // POST /students - Used mainly to send/create new data.
