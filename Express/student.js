@@ -81,6 +81,30 @@ app.put("/students/:id", (req, res) => {
   res.send("Student Updated Successfully");
 });
 
+app.delete("/students/:id", (req, res) => {
+  const data = fs.readFileSync("student.json", "utf-8");
+  const students = JSON.parse(data);
+ 
+  const id = Number(req.params.id);
+  ////In Express.js, req.params.id is used to get a value from the URL path parameter.
+  
+  const index = students.findIndex((s) => s.id === id);
+ 
+  if (index === -1) {
+    return res.send("Student Not Found");
+  }
+ 
+  students.splice(index, 1);
+//means remove 1 student from the students array, starting at the position stored in index.
+//array.splice(start, deleteCount);  
+ 
+  fs.writeFileSync(
+    "student.json",
+    JSON.stringify(students)
+  );
+ 
+  res.send("Student Deleted Successfully");
+});
 
 
 // POST /students - Used mainly to send/create new data.
