@@ -1,0 +1,58 @@
+(You have to write this code in App.jsx file)
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+//Component: A reusable function that returns UI
+function App() {
+
+  //JavaScript variable
+  const studentName = "Jenny";
+  const age = 22;
+
+  //JavaScript expression inside JSX using {}
+  const course = "React";
+
+  //In JSX, comments inside the return() block must be written inside curly braces:
+  //   {/* This is a JSX comment */}
+//This is because JSX doesn't directly support JavaScript-style comments inside its markup. However, outside the return() block, you can use normal // comments.
+  
+return (
+    //JSX: HTML-like syntax written inside JavaScript
+    <div>
+
+      {/* JSX Elements */}
+      <h1>Welcome to React!</h1>
+
+      {/* Embedding JavaScript expressions using {} */}
+      <h2>Hello, {studentName}</h2>
+      <p>Age: {age}</p>
+      <p>Course: {course}</p>
+
+      {/* JSX Attributes: Use className instead of class */}
+      <h3 className="heading">Student Details</h3>
+
+      {/* JSX supports expressions */}
+      <p>Next year age: {age + 1}</p>
+
+      {/* Conditional Rendering */}
+      <p>{age >= 18 ? "Eligible to Vote" : "Not Eligible"}</p>
+
+      {/* Rendering Lists using map() */}
+      <h3>Subjects:</h3>
+      <ul>
+        {["HTML", "CSS", "JavaScript", "React"].map((subject, index) => (
+          <li key={index}>{subject}</li>
+        ))}
+      </ul>
+
+    </div>
+  );
+}
+
+// Render the App component inside the root element
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <App />
+);
+
+export default App;
